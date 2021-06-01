@@ -10,7 +10,7 @@ then
     sh -c "jfrog rt config --interactive=false --enc-password=true --url=$url --apikey=$apikey"
 elif [ $auth = "accesstoken" ];
 then 
-    sh -c "jfrog rt config --interactive=false --enc-password=true --url=$url --access-token=$token"
+    sh -c "jfrog config --interactive=false --enc-password=true --artifactory-url=$url --access-token=$token"
 else 
     echo "Error: Authentication mode must be set!"; 
 fi
